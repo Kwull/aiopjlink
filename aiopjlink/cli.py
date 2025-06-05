@@ -9,12 +9,12 @@ from aiopjlink.projector import PJLink
 async def cli():
 
     # Parse
-    ip = sys.argv[1] if len(sys.argv) >= 2 else "192.168.1.120"
+    ip = sys.argv[1] if len(sys.argv) >= 2 else "192.168.68.124"
     cmd = sys.argv[2] if len(sys.argv) >= 3 else "off"
     cmd = cmd.lower()
 
     # Send the mssage.
-    async with PJLink(address=ip) as link:
+    async with PJLink(address=ip, password="1234") as link:
 
         if cmd == "on":
             await link.power.turn_on()
