@@ -1,15 +1,16 @@
 <div align="center">
 
-# aiopjlink
+# aiopjlink-kw
 
-A modern Python asyncio PJLink library (Class I and Class II).
+A modern Python asyncio PJLink library (Class I and Class II). 
+This is a fork from HEInventions/aiopjlink.
 
-[![PyPI](https://img.shields.io/pypi/v/aiopjlink?logo=python&logoColor=%23cccccc)](https://pypi.org/project/aiopjlink)
-![PyPI - License](https://img.shields.io/pypi/l/aiopjlink)
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/aiopjlink)
+[![PyPI](https://img.shields.io/pypi/v/aiopjlink-kw?logo=python&logoColor=%23cccccc)](https://pypi.org/project/aiopjlink-kw)
+![PyPI - License](https://img.shields.io/pypi/l/aiopjlink-kw)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/aiopjlink-kw)
 
-![PyPI - Downloads](https://img.shields.io/pypi/dm/aiopjlink)
-![GitHub repo size](https://img.shields.io/github/repo-size/HEInventions/aiopjlink)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/aiopjlink-kw)
+![GitHub repo size](https://img.shields.io/github/repo-size/kwull/aiopjlink)
 
 </div>
 
@@ -27,6 +28,8 @@ PJLink consists of [Class 1](https://pjlink.jbmia.or.jp/english/data/5-1_PJLink_
 ## What is aiopjlink?
 
 A Python library that uses [asyncio](https://docs.python.org/3/library/asyncio.html) to talk to one or more projectors connected to a network using the PJLink protocol.
+
+The main difference from the HEInventions/aiopjlink implementation is that in aiopjlink-kw, each PJLink command is executed over a new TCP/IP connection, including authentication if required. This approach was taken due to the specific PJLink implementation used by AWOL projectors.
 
 It has these advantages:
 
