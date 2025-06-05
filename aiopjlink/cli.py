@@ -14,7 +14,7 @@ async def cli():
     cmd = cmd.lower()
 
     # Send the mssage.
-    async with PJLink(address=ip, password="1234") as link:
+    async with PJLink(address=ip) as link:
 
         if cmd == "on":
             await link.power.turn_on()

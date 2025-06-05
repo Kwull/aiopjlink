@@ -50,3 +50,5 @@ coverage_html = "coverage html"
 p_on = "python -m aiopjlink.cli 192.168.68.124 on"
 p_off = "python -m aiopjlink.cli 192.168.68.124 off"
 p_errors = "python -m aiopjlink.cli 192.168.68.124 errors"
+p2_power = "python -m aiopjlink.cli2 power_status"
+
